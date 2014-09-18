@@ -1,0 +1,34 @@
+{
+    "key": "jp-s5r-hipchat-addons-test",
+    "name": "Test",
+    "description": "unko",
+    "vendor": {
+        "name": "shunirr",
+        "url": "http://s5r.jp"
+    },
+    "links": {
+        "self": "http://hipchat-addons.s5r.jp/atlassian-connect.json",
+        "homepage": "http://hipchat-addons.s5r.jp/atlassian-connect.json"
+    },
+    "capabilities": {
+        "hipchatApiConsumer": {
+            "scopes": [
+                "send_notification"
+            ],
+            "fromName": "Test"
+        },
+        "installable": {
+            "callbackUrl": "http://hipchat-addons.s5r.jp/installable",
+            "allowGlobal": false,
+            "allowRoom": true
+        },
+        "webhook": [
+            {
+                "url": "http://hipchat-addons.s5r.jp/webhook",
+                "pattern": ".*",
+                "event": "room_message",
+                "name": "hoge"
+            }
+        ]
+    }
+}
